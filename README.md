@@ -14,7 +14,7 @@ This homework is largely the same as [this lab exercise](http://www.cse.chalmers
 
 # Problems
 
-## 1. Limited Stack (30 points)  
+## 1. Limited Stack  
 
 Consider the class **LimitedStack**. A **LimitedStack** object represents a Stack data-structure that is a queue following the last-in-first-out principle (LIFO). Additionally, it can only hold a maximum number of elements, given by the field *capacity*. The stack itself is represented by an array of *capacity* length. The current top of the stack is located at index *top*. If the stack is empty, *top* is *-1*. The stack should implement the following methods:
 
@@ -103,7 +103,7 @@ method Main(){
 
 The class implementation, with the Dafny annotations needed to prove it correct, should be located in a `LimitedStack.dfy` file. Include comments as appropriate to understand the file.
 
-## 2. Tokeneer (70 points)
+## 2. Tokeneer
 
 The [Tokeneer](http://www.adacore.com/sparkpro/tokeneer) project is a famous large industrial case-study and benchmark set for software verification systems. It concerns the management of a high-security building with doors opened by fingerprint recognition.
 
@@ -113,14 +113,14 @@ Generally speaking, a user enrolls in the system at the enrollment station and r
 
 Opening the door has the user present a token to the ID station and place a finger on the fingerprint reader. The ID station checks that the user's fingerprint agrees with what is stored on the user's token and that the user has the adequate security clearance to enter the door. If a security breach is discovered (i.e., a token does not match the scanned fingerprint), then the token is invalidated immediately and the alarm sounds.
 
-The above description in English is not exact or precise. Formally specify and implement the system in Dafny. The solution should be in a `Tokeneer.dfy` file or in a directory with several different files. Include a text file to explain the solution with its structure.
+The above description in English is not exact or precise. Formally specify and implement the system in Dafny. The solution should be in a `Tokeneer.dfy` file. Include a text file to explain the solution with its structure.
 
 ### System components
 
 Design the classes representing the different elements of the system:
 
   * Tokens delivered to users. Tokens must store their user's identifier and a security clearance. Tokens may be invalidated.
-  * ID stations corresponding to a certain door with a given security level. The state of the door and the alarm can be simply represented by booleans.
+  * ID station corresponding to a high security door requiring a high clearance level for entry. The state of the door and the alarm can be simply represented by booleans.
   * The enrollment station that must keep track of the users who currently have a token.
 
 The system model must include the ability to 
