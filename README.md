@@ -109,9 +109,9 @@ The [Tokeneer](http://www.adacore.com/sparkpro/tokeneer) project is a famous lar
 
 The real system has a very large specification that is beyond the scope of this class. The goal here is to model at a high-level a super mini-version of the Tokeneer system in Dafny and verify its correctness. 
 
-Generally speaking, a user enrolls in the system at the enrollment station and receives a token. The token stores the user's fingerprint data and the user's security clearance level. Model fingerprint data as a single integer. Also, for the model, there are only three security clearance levels: Low, Medium, and High. The enrollment station tracks all users registered in the system and prevents users from being issued more than one token at a time.
+Generally speaking, a user enrolls in the system at the enrollment station and receives a token. The token stores the user's fingerprint data and the user's security clearance level. Model fingerprint data as a single integer. Also, for this homework, there is only one security clearance level. The enrollment station tracks all users registered in the system and prevents users from being issued more than one token at a time.
 
-Opening the door has the user present a token to the ID station and place a finger on the fingerprint reader. The ID station checks that the user's fingerprint agrees with what is stored on the user's token and that the user has the adequate security clearance to enter the door. If a security breach is discovered (i.e., a token does not match the scanned fingerprint), then the token is invalidated immediately and the alarm sounds.
+Opening the door has the user present a token to the ID station and place a finger on the fingerprint reader. The ID station checks that the user's fingerprint agrees with what is stored on the user's token and that the user has a security clearance to enter the door. If a security breach is discovered (i.e., a token does not match the scanned fingerprint), then the token is invalidated immediately and the alarm sounds.
 
 The above description in English is not exact or precise. Formally specify and implement the system in Dafny. The solution should be in a `Tokeneer.dfy` file. Include a text file to explain the solution with its structure.
 
@@ -120,7 +120,7 @@ The above description in English is not exact or precise. Formally specify and i
 Design the classes representing the different elements of the system:
 
   * Tokens delivered to users. Tokens must store their user's identifier and a security clearance. Tokens may be invalidated.
-  * ID station corresponding to a security door requiring a clearance level for entry. The state of the door and the alarm can be simply represented by booleans.
+  * ID station corresponding to a security door requiring a clearance for entry. The state of the door and the alarm can be simply represented by booleans.
   * The enrollment station that must keep track of the users who currently have a token.
 
 The system model must include the ability to 
