@@ -120,7 +120,7 @@ The above description in English is not exact or precise. Formally specify and i
 Design the classes representing the different elements of the system:
 
   * Tokens delivered to users. Tokens must store their user's identifier and a security clearance. Tokens may be invalidated.
-  * ID station corresponding to a high security door requiring a high clearance level for entry. The state of the door and the alarm can be simply represented by booleans.
+  * ID station corresponding to a security door requiring a clearance level for entry. The state of the door and the alarm can be simply represented by booleans.
   * The enrollment station that must keep track of the users who currently have a token.
 
 The system model must include the ability to 
